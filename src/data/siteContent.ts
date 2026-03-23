@@ -1,14 +1,15 @@
 export const locales = {
   hr: {
     hero: {
-      headline: "Vrhunski digitalni nastup koji ulijeva povjerenje i donosi rezultate.",
-      subheadline: "Pomažemo hrvatskim poduzetnicima pretvoriti posjetitelje u klijente. Izrađujemo elegantne web stranice koje izgledaju premium, rade besprijekorno i zahtijevaju minimalno vašeg vremena.",
-      primaryCta: "Zatražite neobvezujuću procjenu",
-      secondaryCta: "Saznajte kako radimo",
+      headline: "Pretvorite svoj digitalni nastup u najjači prodajni alat.",
+      subheadline: "Gradimo premium web stranice za hrvatske poduzetnike koji cijene besprijekoran dizajn i jasne poslovne rezultate. Bez skrivenih troškova i bez gubitka vašeg vremena.",
+      primaryCta: "Besplatna vizualna strategija",
+      secondaryCta: "Pogledajte naš proces",
+      responseMarker: "Odgovor stiže unutar 4h",
       trustBullets: [
-        "Fiksne i transparentne cijene bez iznenađenja",
-        "Sve na jednom mjestu: dizajn, kod i domena",
-        "Dugoročna i pouzdana tehnička podrška"
+        "Fiksne cijene. Bez agencijskih marži.",
+        "Spremni za klijente u 10 radnih dana.",
+        "Dizajn koji prodaje dok vi odmarate."
       ]
     },
     problems: [
