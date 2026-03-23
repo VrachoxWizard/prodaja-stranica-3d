@@ -33,10 +33,10 @@ function App() {
           <FadeIn><HeroSection /></FadeIn>
           <FadeIn><ProblemSection /></FadeIn>
           <FadeIn><SolutionSection /></FadeIn>
-          <FadeIn><AudienceSection /></FadeIn>
           <FadeIn><PricingSection /></FadeIn>
-          <FadeIn><ProcessSection /></FadeIn>
           <FadeIn><PortfolioSection /></FadeIn>
+          <FadeIn><ProcessSection /></FadeIn>
+          <FadeIn><AudienceSection /></FadeIn>
           <FadeIn><FaqSection /></FadeIn>
           <FadeIn><ContactSection /></FadeIn>
         </main>

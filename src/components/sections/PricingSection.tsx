@@ -6,18 +6,18 @@ import { cn } from "@/lib/utils"
 
 export function PricingSection() {
   return (
-    <section id="paketi" className="py-32 relative">
+    <section id="usluge" className="py-32 relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-24">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
-            Jednostavni paketi bez skrivenih troškova.
+            Usluge prilagođene vašoj fazi rasta.
           </h2>
           <p className="text-lg text-text-muted">
-            Odaberite paket koji odgovara vašim trenutnim potrebama. Nadogradite bilo kada.
+            Bez obzira trebate li prvu stranicu ili ozbiljan redizajn, imamo rješenje koje radi za vas.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {siteContent.packages.map((pkg) => (
             <Card 
               key={pkg.id} 
@@ -31,7 +31,7 @@ export function PricingSection() {
               {pkg.highlight && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   <span className="bg-primary text-black text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-[0_0_15px_rgba(212,175,55,0.5)]">
-                    Najbolja vrijednost
+                    Najčešći odabir
                   </span>
                 </div>
               )}
@@ -43,9 +43,9 @@ export function PricingSection() {
               
               <div className="mb-8 pb-8 border-b border-white/10">
                 <div className="flex items-baseline gap-1">
-                  <div className="text-4xl font-extrabold text-white">{pkg.price}</div>
+                  <div className="text-2xl font-bold text-white">{pkg.price}</div>
                 </div>
-                <div className="text-sm font-medium text-text-muted mt-2">Jednokratno plaćanje</div>
+                <div className="text-xs font-medium text-text-muted mt-2 uppercase tracking-wide">Jasno ulaganje</div>
               </div>
               
               <ul className="flex-1 space-y-5 mb-10">
@@ -58,6 +58,7 @@ export function PricingSection() {
               </ul>
               
               <Button 
+                href="#contact"
                 variant={pkg.highlight ? "primary" : "secondary"} 
                 size="lg" 
                 className="w-full font-bold text-base"

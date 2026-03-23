@@ -1,92 +1,121 @@
-export const siteContent = {
-  hero: {
-    headline: "Moderni web za ozbiljne profesionalce.",
-    subheadline: "Pretvorite posjetitelje u klijente uz premium web stranicu koja ulijeva povjerenje. Brzo, pristupačno i bez stresa.",
-    primaryCta: "Zatražite ponudu",
-    secondaryCta: "Pogledajte pakete",
-    trustBullets: [
-      "Završeno u 7 do 14 dana",
-      "Sve uključeno - dizajn i kod",
-      "Bez skrivenih troškova"
-    ]
-  },
-  problems: [
-    "Vaša web stranica izgleda zastarjelo i odbija klijente prije nego vas kontaktiraju.",
-    "Nemate vremena ni znanja za bavljenje tehničkim detaljima.",
-    "Bojite se visokih agencijskih cijena i skrivenih troškova."
-  ],
-  solutions: [
-    "Premium dizajn koji gradi instant povjerenje kod vaših klijenata.",
-    "Cjelokupan proces vodimo mi - od prve ideje do lansiranja.",
-    "Fiksni, jasni i pristupačni paketi bez iznenađenja."
-  ],
-  packages: [
-    {
-      id: "starter",
-      name: "Starter",
-      description: "Idealno za jednostavnu online prisutnost.",
-      price: "Od 490 €",
-      features: [
-        "Jedna profesionalna stranica (One-page)",
-        "Kontakt forma",
-        "Mobilna prilagodljivost",
-        "Osnovna SEO optimizacija"
-      ],
-      cta: "Odaberite Starter",
-      highlight: false
+export const locales = {
+  hr: {
+    hero: {
+      headline: "Profesionalna web stranica koja ulijeva povjerenje i donosi upite.",
+      subheadline: "Pomažemo malim i srednjim poduzetnicima u Hrvatskoj ostvariti snažan prvi dojam. Bez skrivenih troškova i tehničkog žargona – mi vodimo cijeli proces.",
+      primaryCta: "Zatražite besplatnu ponudu",
+      secondaryCta: "Kako surađujemo",
+      trustBullets: [
+        "Fokus na rast broja vaših upita",
+        "Sve na jednom mjestu - dizajn i kod",
+        "Dugoročna podrška i održavanje"
+      ]
     },
-    {
-      id: "business",
-      name: "Business",
-      description: "Za tvrtke koje žele snažan digitalni nastup.",
-      price: "Od 890 €",
-      features: [
-        "Više stranica (Usluge, O nama, Galerija)",
-        "Napredna struktura i prezentacija",
-        "Jači signali povjerenja i reference",
-        "Povezivanje s društvenim mrežama"
-      ],
-      cta: "Odaberite Business",
-      highlight: true
-    },
-    {
-      id: "business-ai",
-      name: "Business + AI",
-      description: "Moderna prednost uz pametnu tehnologiju.",
-      price: "Od 1.290 €",
-      features: [
-        "Sve uključeno u Business paket",
-        "AI-asistent za često postavljana pitanja",
-        "Pametna obrada upita",
-        "Optimizacija tekstova uz AI"
-      ],
-      cta: "Odaberite Business + AI",
-      highlight: false
+    problems: [
+      "Vaša postojeća stranica izgleda zastarjelo i narušava povjerenje klijenata.",
+      "Nemate vremena ni tehničkog znanja za osmišljavanje modernog weba.",
+      "Bojite se visokih agencijskih cijena, dugog čekanja i skrivenih troškova."
+    ],
+    solutions: [
+      "Premium vizualni identitet koji gradi instant povjerenje kod posjetitelja.",
+      "Preuzimamo cijeli tehnički i dizajnerski proces, od ideje do lansiranja.",
+      "Transparentna ulaganja i struktura prilagođena malim poduzetnicima."
+    ],
+    packages: [
+      {
+        id: "izrada",
+        name: "Izrada web stranice",
+        description: "Idealno za poduzetnike koji tek kreću ili trebaju brzu online prisutnost.",
+        price: "Orijentacijski: od 490 €",
+        features: [
+          "Profesionalan i moderan dizajn",
+          "Kontakt forma za upite",
+          "Prilagođeno za mobitele",
+          "Osnovna lokalna SEO optimizacija"
+        ],
+        cta: "Zatražite ponudu",
+        highlight: false
+      },
+      {
+        id: "redizajn",
+        name: "Redizajn i modernizacija",
+        description: "Za tvrtke čija postojeća stranica više ne predstavlja kvalitetu njihovih usluga.",
+        price: "Orijentacijski: od 890 €",
+        features: [
+          "Unaprjeđenje vizualnog dojma",
+          "Poboljšano korisničko iskustvo (UX)",
+          "Isticanje referenci i povjerenja",
+          "Povećanje konverzije posjetitelja"
+        ],
+        cta: "Zatražite ponudu",
+        highlight: true
+      },
+      {
+        id: "odrzavanje",
+        name: "Održavanje i dorade",
+        description: "Osigurajte da vaša stranica uvijek radi brzo, sigurno i s ažurnim informacijama.",
+        price: "Prema dogovoru",
+        features: [
+          "Redovne sigurnosne provjere",
+          "Ažuriranja sadržaja i slika",
+          "Tehnička podrška",
+          "Korekcije i dodavanje novih funkcija"
+        ],
+        cta: "Saznajte više",
+        highlight: false
+      }
+    ],
+    audiences: [
+      "Lokalne usluge i obrti",
+      "Poliklinike i terapeuti",
+      "Saloni i beauty centri",
+      "Turizam i mali iznajmljivači",
+      "Konzultanti i agencije"
+    ],
+    processSteps: [
+      { title: "Definiranje ciljeva", description: "Javite nam se, upoznajemo se s vašim poslom i definiramo što želimo postići." },
+      { title: "Dizajn i izrada", description: "Kreiramo modernu, brzu i pouzdanu web stranicu uz vaše redovito odobrenje." },
+      { title: "Testiranje i pregled", description: "Zajedno prolazimo kroz stranicu kako bismo osigurali da je spremna za javnost." },
+      { title: "Lansiranje i podrška", description: "Postavljamo stranicu online i osiguravamo naknadnu podršku." }
+    ],
+    faqs: [
+      { question: "Koliko brzo možete napraviti stranicu?", answer: "Većina projekata je dovršena unutar 7 do 14 dana nakon što prikupimo osnovne materijale s vaše strane." },
+      { question: "Što trebam pripremiti za početak?", answer: "Trebaju nam samo osnovne informacije o uslugama, logotip i fotografije. Ostatak možemo organizirati mi." },
+      { question: "Tko je vlasnik stranice i domene?", answer: "Vi ste isključivi vlasnik domene i stranice. Nudimo pomoć pri zakupu kako biste zadržali potpunu kontrolu." },
+      { question: "Pomažete li s tekstovima?", answer: "Da, pomažemo u strukturiranju tekstova kako bi bili privlačni i usmjereni na povećanje broja upita." }
+    ],
+    contact: {
+      title: "Spremni za ozbiljniji digitalni nastup?",
+      subtitle: "Ispunite kratku formu ispod i javit ćemo vam se s prijedlogom i procjenom unutar 24 sata.",
+      buttonText: "Pošaljite upit za suradnju",
+      microcopy: "Vaši podaci su 100% sigurni. Upit ne stvara nikakvu obvezu."
     }
-  ],
-  audiences: [
-    "Lokalne usluge i obrti",
-    "Terapeuti i treneri",
-    "Saloni i beauty centri",
-    "Mali iznajmljivači",
-    "Konzultanti i freelanceri"
-  ],
-  processSteps: [
-    { title: "Kratki dogovor", description: "Javite nam se, definiramo ciljeve i opseg posla." },
-    { title: "Dizajn i izrada", description: "Kreiramo modernu, brzu i pouzdanu web stranicu." },
-    { title: "Pregled", description: "Zajedno prolazimo kroz stranicu i vršimo zadnje korekcije." },
-    { title: "Lansiranje", description: "Vaša nova stranica je online i spremna za klijente!" }
-  ],
-  faqs: [
-    { question: "Koliko traje izrada?", answer: "Većina Starter i Business projekata je dovršena unutar 7 do 14 dana nakon dostave materijala." },
-    { question: "Što trebam pripremiti?", answer: "Samo osnovne informacije o vašem poslu, logotip i eventualne fotografije. Sve ostalo možemo mi oblikovati." },
-    { question: "Je li uključen hosting i domena?", answer: "Pomažemo vam odabrati i zakupiti hosting te domenu na vaše ime, kako biste imali potpunu kontrolu." },
-    { question: "Mogu li kasnije nadograditi paket?", answer: "Naravno! U bilo kojem trenutku možemo dodati nove stranice ili uvesti AI opcije." }
-  ],
-  contact: {
-    title: "Spremni za bolji web?",
-    subtitle: "Ispunite kratku formu i javit ćemo vam se s prijedlogom u roku 24 sata.",
-    buttonText: "Pošaljite upit",
-    microcopy: "Vaši podaci su sigurni. Nema obveze plaćanja."
+  },
+  en: {
+    hero: {
+      headline: "A professional website that builds trust and drives inquiries.",
+      subheadline: "We help small and medium businesses make a powerful first impression. No hidden costs, no technical jargon - we manage the entire process.",
+      primaryCta: "Get a free quote",
+      secondaryCta: "How we work",
+      trustBullets: [
+        "Focus on growing your inquiries",
+        "Everything in one place - design & code",
+        "Long-term support and maintenance"
+      ]
+    },
+    problems: [],
+    solutions: [],
+    packages: [],
+    audiences: [],
+    processSteps: [],
+    faqs: [],
+    contact: {
+      title: "Ready for a serious digital upgrade?",
+      subtitle: "Fill out the short form below and we will get back to you with a proposal within 24 hours.",
+      buttonText: "Send inquiry",
+      microcopy: "Your data is 100% safe. No obligations attached."
+    }
   }
 };
+
+export const siteContent = locales.hr;
