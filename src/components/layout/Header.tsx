@@ -15,12 +15,14 @@ export function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border-subtle bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="font-bold text-2xl tracking-tight text-white flex items-center gap-2 relative z-50">
-          <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-black font-black text-lg">S</div>
-          <span>Studio<span className="text-primary">.</span></span>
-        </div>
+        <a href="#" className="font-bold text-xl tracking-tight flex items-center gap-2.5 relative z-50 group">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-light to-primary flex items-center justify-center text-black font-black text-sm shadow-sm border border-primary/20 group-hover:scale-105 transition-transform duration-300">
+            S
+          </div>
+          <span className="text-text-main group-hover:text-white transition-colors">Studio<span className="text-primary">.</span></span>
+        </a>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
           <a href="#problemi" className="hover:text-white transition-colors">Pristup</a>
@@ -30,12 +32,12 @@ export function Header() {
         </nav>
         
         <div className="flex items-center gap-4 relative z-50">
-          <Button href="#contact" variant="primary" size="sm" className="hidden sm:inline-flex text-xs px-4 h-9">
-            Zatraži ponudu
+          <Button href="#contact" variant="primary" size="sm" className="hidden border-none sm:inline-flex text-xs px-5 h-9 font-semibold">
+            Zatraži procjenu
           </Button>
           
           <button 
-            className="md:hidden text-white p-2 -mr-2"
+            className="md:hidden text-white p-3 -mr-3 transition-transform active:scale-95 cursor-pointer"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -46,17 +48,17 @@ export function Header() {
       
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-20 z-40 bg-background/95 backdrop-blur-xl border-t border-white/5 flex flex-col p-6 animate-in slide-in-from-top-4 duration-300 md:hidden overflow-y-auto">
-          <nav className="flex flex-col gap-6 text-center mt-8">
-            <a href="#problemi" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold text-white py-2">Pristup</a>
-            <a href="#usluge" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold text-white py-2">Usluge</a>
-            <a href="#proces" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold text-white py-2">Proces</a>
-            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold text-white py-2">Česta pitanja</a>
+        <div className="fixed inset-0 top-20 z-40 bg-background/98 backdrop-blur-2xl flex flex-col p-6 animate-in slide-in-from-top-4 duration-400 ease-out md:hidden overflow-y-auto border-t border-border-subtle">
+          <nav className="flex flex-col gap-6 text-center mt-12">
+            <a href="#problemi" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-semibold text-text-muted hover:text-white transition-colors py-2">Pristup</a>
+            <a href="#usluge" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-semibold text-text-muted hover:text-white transition-colors py-2">Usluge</a>
+            <a href="#proces" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-semibold text-text-muted hover:text-white transition-colors py-2">Proces</a>
+            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-semibold text-text-muted hover:text-white transition-colors py-2">Česta pitanja</a>
           </nav>
           
-          <div className="mt-12 flex justify-center">
-             <Button href="#contact" onClick={() => setIsMobileMenuOpen(false)} variant="primary" size="lg" className="w-full max-w-sm font-bold shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-                Zatražite besplatnu ponudu
+          <div className="mt-auto mb-12 flex justify-center">
+             <Button href="#contact" onClick={() => setIsMobileMenuOpen(false)} variant="primary" size="lg" className="w-full max-w-sm font-bold border-none">
+                Zatražite usmenu ponudu
              </Button>
           </div>
         </div>

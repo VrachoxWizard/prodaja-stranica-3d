@@ -5,16 +5,25 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Premium Dark Theme Colors */
-  --color-background: #050810;
-  --color-surface: #0a0d15;
-  --color-surface-hover: #111520;
+  --color-background: #030508;
+  --color-surface: #0a0c12;
+  --color-surface-hover: #11141d;
+  --color-surface-raised: #161a25;
   
   --color-primary: #d4af37;
   --color-primary-dark: #b5952f;
+  --color-primary-light: #f3d778;
   
   --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-border: #1e212b;
+  --color-text-muted: #8b9bb4;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.04);
+  
+  --shadow-premium: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+  --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.15);
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
 }
 
 @layer base {
@@ -29,11 +38,27 @@
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    font-weight: 500;
   }
   p, li {
-    line-height: 1.65;
+    line-height: 1.7;
     letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-surface/80 backdrop-blur-md border border-border shadow-premium rounded-2xl;
+  }
+  .glass-panel {
+    @apply bg-surface-raised/50 backdrop-blur-xl border border-border shadow-premium rounded-2xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white to-text-muted;
+  }
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary-light to-primary-dark;
   }
 }

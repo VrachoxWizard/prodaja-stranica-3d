@@ -1,100 +1,100 @@
 export const locales = {
   hr: {
     hero: {
-      headline: "Vrhunska web stranica koja ulijeva povjerenje i donosi konkretne upite.",
-      subheadline: "Pomažemo malim poduzetnicima ostvariti snažan prvi dojam i privući klijente. Bez skrivenih troškova, bez tehničkog žargona — mi vodimo cijeli proces od ideje do lansiranja.",
-      primaryCta: "Zatražite neobvezujuću ponudu",
-      secondaryCta: "Saznajte naš pristup",
+      headline: "Vrhunski digitalni nastup koji ulijeva povjerenje i donosi rezultate.",
+      subheadline: "Pomažemo hrvatskim poduzetnicima pretvoriti posjetitelje u klijente. Izrađujemo elegantne web stranice koje izgledaju premium, rade besprijekorno i zahtijevaju minimalno vašeg vremena.",
+      primaryCta: "Zatražite neobvezujuću procjenu",
+      secondaryCta: "Saznajte kako radimo",
       trustBullets: [
-        "Fokus na rast broja vaših upita",
-        "Sve na jednom mjestu - dizajn i kod",
-        "Dugoročna podrška i održavanje"
+        "Fiksne i transparentne cijene bez iznenađenja",
+        "Sve na jednom mjestu: dizajn, kod i domena",
+        "Dugoročna i pouzdana tehnička podrška"
       ]
     },
     problems: [
-      "Vaša postojeća stranica izgleda zastarjelo i narušava povjerenje klijenata.",
-      "Nemate vremena ni tehničkog znanja za osmišljavanje modernog weba.",
-      "Bojite se visokih agencijskih cijena, dugog čekanja i skrivenih troškova."
+      "Zastarjela web stranica tiho tjera klijente konkurenciji i narušava vašu profesionalnost.",
+      "Visoke cijene agencija i skriveni troškovi čine modernizaciju weba nedostižnom i rizičnom.",
+      "Nemate vremena za dugotrajne tehničke procese, polovična rješenja i testiranje strpljenja."
     ],
     solutions: [
-      "Premium vizualni identitet koji gradi instant povjerenje kod posjetitelja.",
-      "Preuzimamo cijeli tehnički i dizajnerski proces, od ideje do lansiranja.",
-      "Transparentna ulaganja i struktura prilagođena malim poduzetnicima."
+      "Premium dizajn koji trenutačno gradi autoritet i izdvaja vas u vašoj lokalnoj industriji.",
+      "Pristupačna investicija s jasnom strukturom – vi točno znate što dobivate i za koju cijenu.",
+      "Proces bez trenja: vi samo odobravate vizualne smjerove, a mi preuzimamo apsolutno sve ostalo."
     ],
     packages: [
       {
         id: "izrada",
-        name: "Izrada web stranice",
-        description: "Nova stranica spremna za prikupljanje upita i klijenata.",
-        bestFit: "Za tvrtke bez weba",
-        turnaround: "Dovršeno u ~7 dana",
+        name: "Starter Web",
+        description: "Brz, elegantan i profesionalan temelj za vašu tvrtku.",
+        bestFit: "Za obrtnike i lokalne usluge",
+        turnaround: "Spreman u ~7 do 10 dana",
         price: "Od 490 €",
         features: [
-          "Profesionalan i moderan dizajn",
-          "Integrirana forma za upite",
-          "Prilagođeno za mobitele (Responsive)",
-          "Brzo učitavanje i stabilnost"
+          "Dizajn optimiziran za mobitele",
+          "Integrirana kontakt i upit forma",
+          "Postavljanje Google Analyticsa",
+          "Osnovna SEO optimizacija"
         ],
         cta: "Zatražite ponudu",
         highlight: false
       },
       {
         id: "redizajn",
-        name: "Redizajn i modernizacija",
-        description: "Nadogradnja stare stranice u moderan prodajni alat.",
-        bestFit: "Za tvrtke sa zastarjelim webom",
-        turnaround: "Dovršeno u 10-14 dana",
+        name: "Pro Premium",
+        description: "Moćna prodajna stranica dizajnirana za maksimalnu konverziju i vizualni autoritet.",
+        bestFit: "Za tvrtke spremne na rast i izdvajanje",
+        turnaround: "Spreman u ~14 do 21 dan",
         price: "Od 890 €",
         features: [
-          "Unaprjeđenje vizualnog dojma",
-          "Poboljšano korisničko iskustvo (UX)",
-          "Isticanje referenci i povjerenja",
-          "Fokus na povećanje konverzije"
+          "Sve što nudi Starter paket",
+          "Dizajn više različitih podstranica",
+          "Kopirajting – pomoć s tekstovima",
+          "Premium animacije i dubinski SEO"
         ],
-        cta: "Zatražite ponudu",
+        cta: "Preporučeni izbor",
         highlight: true
       },
       {
         id: "odrzavanje",
-        name: "Održavanje i dorade",
-        description: "Mirno spavajte uz tehničku podršku i redovna ažuriranja.",
-        bestFit: "Dugoročna suradnja",
-        turnaround: "Stalna podrška",
+        name: "Dugoročni Partner",
+        description: "Potpuni mir uz redovno održavanje, sigurnosne nadogradnje i sitne izmjene.",
+        bestFit: "Za kontinuiranu stabilnost i podršku",
+        turnaround: "Stalna mjesečna tehnička zaštita",
         price: "Prema dogovoru",
         features: [
           "Redovne sigurnosne provjere",
-          "Ažuriranja sadržaja i slika",
-          "Tehnička podrška",
-          "Dodavanje novih funkcija"
+          "Ažuriranja sadržaja i objava",
+          "Prioritetni popravci i dodaci",
+          "Savjeti za digitalni rast"
         ],
         cta: "Saznajte više",
         highlight: false
       }
     ],
     audiences: [
-      "Lokalne usluge i obrti",
-      "Poliklinike i terapeuti",
-      "Saloni i beauty centri",
-      "Turizam i mali iznajmljivači",
-      "Konzultanti i agencije"
+      "Lokalne Usluge i Obrti",
+      "Terapeuti i Ordinacije",
+      "Beauty centri i Saloni",
+      "Turizam i Apartmani",
+      "Agencije i Konzultanti"
     ],
     processSteps: [
-      { title: "Definiranje ciljeva", description: "Javite nam se, upoznajemo se s vašim poslom i definiramo što želimo postići." },
-      { title: "Dizajn i izrada", description: "Kreiramo modernu, brzu i pouzdanu web stranicu uz vaše redovito odobrenje." },
-      { title: "Testiranje i pregled", description: "Zajedno prolazimo kroz stranicu kako bismo osigurali da je spremna za javnost." },
-      { title: "Lansiranje i podrška", description: "Postavljamo stranicu online i osiguravamo naknadnu podršku." }
+      { title: "1. Strategija i ciljevi", description: "Slušamo o vašem poslovanju, ciljanoj publici i predlažemo idealnu strukturu weba." },
+      { title: "2. Dizajn i usklađivanje", description: "Izrađujemo moderan dizajn. Vi pregledavate radnu verziju i odobravate ključne vizualne elemente." },
+      { title: "3. Izrada i testiranje", description: "Programiramo dogovoreno te pomno testiramo sve funkcije na računalima i pametnim telefonima." },
+      { title: "4. Lansiranje i podrška", description: "Stranica ide aktivno na vašu domenu. Ostajemo dostupni kao vaš tehnički oslonac za budućnost." }
     ],
     faqs: [
-      { question: "Koliko brzo možete napraviti stranicu?", answer: "Većina projekata je dovršena unutar 7 do 14 dana nakon što prikupimo osnovne materijale s vaše strane." },
-      { question: "Što trebam pripremiti za početak?", answer: "Trebaju nam samo osnovne informacije o uslugama, logotip i fotografije. Ostatak možemo organizirati mi." },
-      { question: "Tko je vlasnik stranice i domene?", answer: "Vi ste isključivi vlasnik domene i stranice. Nudimo pomoć pri zakupu kako biste zadržali potpunu kontrolu." },
-      { question: "Pomažete li s tekstovima?", answer: "Da, pomažemo u strukturiranju tekstova kako bi bili privlačni i usmjereni na povećanje broja upita." }
+      { question: "Koliko mog vremena zahtijeva cijeli ovaj proces?", answer: "Vaš angažman je zaista minimalan. Nakon kratkog uvodnog sastanka i dostave radnih materijala (slike, usluge), mi preuzimamo sav teški posao. Dobivate gotov prijedlog dizajna na uvid." },
+      { question: "Što ako nemam profesionalne fotografije i spremne tekstove?", answer: "Nema problema. Često pomažemo strukturirati tekstove tako da jasno naglašavaju vaše prednosti. Što se tiče slika, možemo koristiti licencirane premium fotografije dok ne osigurate vlastite." },
+      { question: "Jesam li ja vlasnik svoje domene i nove web stranice nakon izrade?", answer: "Apsolutno. Vi ste jedini vlasnik domene, hostinga i cijele web stranice. Mi samo radimo u vaše ime. Nikada vas ne zaključavamo u ugovore iz kojih ne možete izaći." },
+      { question: "Pomažete li i nakon što je web stranica napravljena i javno puštena?", answer: "Da, uz izradu nudimo pakete redovnog održavanja, sigurnosnih nadogradnji i osvježavanja sadržaja kako biste vi imali mir i fokusirali se isključivo na svoj posao." }
     ],
     contact: {
-      title: "Spremni za ozbiljniji digitalni nastup?",
-      subtitle: "Ispunite kratku formu ispod i javit ćemo vam se s prijedlogom i procjenom unutar 24 sata.",
-      buttonText: "Pošaljite upit za suradnju",
-      microcopy: "Vaši podaci su 100% sigurni. Upit ne stvara nikakvu obvezu."
+      title: "Spremni za ozbiljniji i moderniji digitalni nastup?",
+      subtitle: "Ispunite formu ispod, a mi ćemo se javiti s konkretnim prijedlogom i potpuno besplatnom procjenom unutar 24 sata.",
+      buttonText: "Pošaljite upit bez obaveza",
+      microcopy: "Razgovor ne stvara nikakvu obvezu niti skriveni trošak. Čuvamo vašu privatnost."
     }
   },
   en: {
