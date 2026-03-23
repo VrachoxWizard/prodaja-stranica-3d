@@ -11,8 +11,9 @@ import { ProcessSection } from "./components/sections/ProcessSection"
 import { PortfolioSection } from "./components/sections/PortfolioSection"
 import { FaqSection } from "./components/sections/FaqSection"
 import { ContactSection } from "./components/sections/ContactSection"
-import { BackgroundCanvas } from "./components/canvas/Environment"
 import { FadeIn } from "./components/ui/FadeIn"
+import { siteContent } from "./data/siteContent"
+import { GridBackground } from "./components/ui/GridBackground"
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <>
-      <BackgroundCanvas />
+      <GridBackground />
       
       <div 
         ref={containerRef}
@@ -41,6 +42,16 @@ function App() {
           <FadeIn><ContactSection /></FadeIn>
         </main>
         <Footer />
+        
+        {/* Sticky Mobile CTA Background Bar */}
+        <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 pb-6 border-t border-white/5 bg-background/80 backdrop-blur-xl z-50 animate-in slide-in-from-bottom-10 fade-in duration-500 delay-[2000ms]">
+          <a 
+            href="#contact" 
+            className="flex items-center justify-center gap-2 bg-primary text-black font-extrabold px-6 py-4 rounded-xl shadow-[0_10px_40px_rgba(212,175,55,0.4)] border border-primary/50 text-base whitespace-nowrap active:scale-95 transition-transform"
+          >
+            {siteContent.hero.primaryCta}
+          </a>
+        </div>
       </div>
     </>
   )

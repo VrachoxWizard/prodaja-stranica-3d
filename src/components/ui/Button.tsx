@@ -12,7 +12,7 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
     const classes = cn(
       "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 active:scale-95 cursor-pointer no-underline",
       {
-        "bg-primary text-black hover:bg-primary-dark shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)]": variant === "primary",
+        "bg-primary text-black hover:bg-primary-dark shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.7)]": variant === "primary",
         "bg-surface text-text-main hover:bg-surface-hover": variant === "secondary",
         "border border-border bg-transparent hover:bg-surface text-text-main": variant === "outline",
         "hover:bg-surface hover:text-text-main text-text-muted": variant === "ghost",

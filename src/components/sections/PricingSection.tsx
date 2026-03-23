@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils"
 
 export function PricingSection() {
   return (
-    <section id="usluge" className="py-32 relative">
+    <section id="usluge" className="py-32 lg:py-40 relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-6">
             Usluge prilagođene vašoj fazi rasta.
           </h2>
           <p className="text-lg text-text-muted">
@@ -22,10 +22,10 @@ export function PricingSection() {
             <Card 
               key={pkg.id} 
               className={cn(
-                "relative p-8 lg:p-10 flex flex-col h-full bg-surface/20 backdrop-blur-2xl transition-all duration-500",
+                "relative p-8 lg:p-10 flex flex-col h-full bg-surface/40 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-500",
                 pkg.highlight 
-                  ? "border-primary/40 shadow-[0_0_50px_rgba(212,175,55,0.15)] md:-translate-y-4 ring-1 ring-primary/30" 
-                  : "border-white/5 hover:border-white/20 hover:bg-surface/30"
+                  ? "ring-1 ring-primary/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_50px_rgba(212,175,55,0.15)] md:-translate-y-4" 
+                  : "ring-1 ring-white/5 hover:ring-white/20 hover:bg-surface/60 hover:-translate-y-1"
               )}
             >
               {pkg.highlight && (
@@ -38,7 +38,16 @@ export function PricingSection() {
               
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-white mb-3">{pkg.name}</h3>
-                <p className="text-sm text-text-muted min-h-[40px] leading-relaxed">{pkg.description}</p>
+                {('bestFit' in pkg) && (
+                  <p className="text-xs text-primary font-bold uppercase tracking-wider mb-3">{(pkg as { bestFit?: string }).bestFit}</p>
+                )}
+                <p className="text-sm text-text-muted min-h-[40px] leading-relaxed mb-4">{pkg.description}</p>
+                {('turnaround' in pkg) && (
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white/5 border border-white/10 text-xs text-white/80 font-medium">
+                    <svg fill="none" height="14" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>{(pkg as { turnaround?: string }).turnaround}</span>
+                  </div>
+                )}
               </div>
               
               <div className="mb-8 pb-8 border-b border-white/10">

@@ -1,10 +1,10 @@
 export const locales = {
   hr: {
     hero: {
-      headline: "Profesionalna web stranica koja ulijeva povjerenje i donosi upite.",
-      subheadline: "Pomažemo malim i srednjim poduzetnicima u Hrvatskoj ostvariti snažan prvi dojam. Bez skrivenih troškova i tehničkog žargona – mi vodimo cijeli proces.",
-      primaryCta: "Zatražite besplatnu ponudu",
-      secondaryCta: "Kako surađujemo",
+      headline: "Vrhunska web stranica koja ulijeva povjerenje i donosi konkretne upite.",
+      subheadline: "Pomažemo malim poduzetnicima ostvariti snažan prvi dojam i privući klijente. Bez skrivenih troškova, bez tehničkog žargona — mi vodimo cijeli proces od ideje do lansiranja.",
+      primaryCta: "Zatražite neobvezujuću ponudu",
+      secondaryCta: "Saznajte naš pristup",
       trustBullets: [
         "Fokus na rast broja vaših upita",
         "Sve na jednom mjestu - dizajn i kod",
@@ -25,13 +25,15 @@ export const locales = {
       {
         id: "izrada",
         name: "Izrada web stranice",
-        description: "Idealno za poduzetnike koji tek kreću ili trebaju brzu online prisutnost.",
-        price: "Orijentacijski: od 490 €",
+        description: "Nova stranica spremna za prikupljanje upita i klijenata.",
+        bestFit: "Za tvrtke bez weba",
+        turnaround: "Dovršeno u ~7 dana",
+        price: "Od 490 €",
         features: [
           "Profesionalan i moderan dizajn",
-          "Kontakt forma za upite",
-          "Prilagođeno za mobitele",
-          "Osnovna lokalna SEO optimizacija"
+          "Integrirana forma za upite",
+          "Prilagođeno za mobitele (Responsive)",
+          "Brzo učitavanje i stabilnost"
         ],
         cta: "Zatražite ponudu",
         highlight: false
@@ -39,13 +41,15 @@ export const locales = {
       {
         id: "redizajn",
         name: "Redizajn i modernizacija",
-        description: "Za tvrtke čija postojeća stranica više ne predstavlja kvalitetu njihovih usluga.",
-        price: "Orijentacijski: od 890 €",
+        description: "Nadogradnja stare stranice u moderan prodajni alat.",
+        bestFit: "Za tvrtke sa zastarjelim webom",
+        turnaround: "Dovršeno u 10-14 dana",
+        price: "Od 890 €",
         features: [
           "Unaprjeđenje vizualnog dojma",
           "Poboljšano korisničko iskustvo (UX)",
           "Isticanje referenci i povjerenja",
-          "Povećanje konverzije posjetitelja"
+          "Fokus na povećanje konverzije"
         ],
         cta: "Zatražite ponudu",
         highlight: true
@@ -53,13 +57,15 @@ export const locales = {
       {
         id: "odrzavanje",
         name: "Održavanje i dorade",
-        description: "Osigurajte da vaša stranica uvijek radi brzo, sigurno i s ažurnim informacijama.",
+        description: "Mirno spavajte uz tehničku podršku i redovna ažuriranja.",
+        bestFit: "Dugoročna suradnja",
+        turnaround: "Stalna podrška",
         price: "Prema dogovoru",
         features: [
           "Redovne sigurnosne provjere",
           "Ažuriranja sadržaja i slika",
           "Tehnička podrška",
-          "Korekcije i dodavanje novih funkcija"
+          "Dodavanje novih funkcija"
         ],
         cta: "Saznajte više",
         highlight: false

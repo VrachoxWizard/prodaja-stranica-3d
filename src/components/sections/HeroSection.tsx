@@ -8,9 +8,9 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-32 overflow-hidden bg-transparent">
-      {/* Background elegant glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[600px] opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-primary/30 blur-[150px] rounded-full" />
+      {/* Intense Background Glow to anchor the typography */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[600px] opacity-30 pointer-events-none mix-blend-screen">
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/80 to-[#1a1cf2]/80 blur-[150px] rounded-full" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center flex-1 flex flex-col justify-center mt-12">
@@ -27,7 +27,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-8 max-w-5xl mx-auto leading-[1.05] drop-shadow-2xl"
+          className="relative text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-8 max-w-5xl mx-auto leading-[1.05] drop-shadow-2xl"
         >
           {headline}
         </motion.h1>
@@ -51,7 +51,7 @@ export function HeroSection() {
             {primaryCta}
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button href="#process" variant="outline" size="lg" className="w-full sm:w-auto text-base backdrop-blur-md bg-white/5 border-white/10 hover:bg-white/10 px-8">
+          <Button href="#proces" variant="outline" size="lg" className="w-full sm:w-auto text-base backdrop-blur-md bg-white/5 border-white/10 hover:bg-white/10 px-8">
             {secondaryCta}
           </Button>
         </motion.div>

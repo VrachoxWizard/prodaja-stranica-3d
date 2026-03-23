@@ -8,14 +8,30 @@ export function ContactSection() {
   const { title, subtitle, buttonText, microcopy } = siteContent.contact;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
     
-    // Simulate network request
-    setTimeout(() => {
-      setStatus("success");
-    }, 1500);
+    const formData = new FormData(e.currentTarget);
+    // TODO: Zamijeniti s pravim Web3Forms access key-em
+    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+      if (data.success) {
+        setStatus("success");
+      } else {
+        console.error("Form submission error", data);
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Network error on form submission", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -50,18 +66,18 @@ export function ContactSection() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white">Ime i prezime <span className="text-primary">*</span></label>
-                  <input required type="text" className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors placeholder:text-white/30" placeholder="Npr. Ivan Horvat" />
+                  <input required name="name" type="text" className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors placeholder:text-white/30" placeholder="Npr. Ivan Horvat" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white">Email ili telefon <span className="text-primary">*</span></label>
-                  <input required type="text" className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors placeholder:text-white/30" placeholder="Npr. ivan@tvrtka.hr" />
+                  <input required name="contact" type="text" className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors placeholder:text-white/30" placeholder="Npr. ivan@tvrtka.hr" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white">Što vam točno treba?</label>
                 <div className="relative">
-                  <select className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors appearance-none cursor-pointer">
+                  <select name="intent" className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors appearance-none cursor-pointer">
                     <option className="bg-background" value="nova">Nova web stranica</option>
                     <option className="bg-background" value="redizajn">Redizajn postojeće stranice</option>
                     <option className="bg-background" value="odrzavanje">Održavanje / dorade</option>
@@ -76,7 +92,7 @@ export function ContactSection() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white">Dodatne informacije (opcionalno)</label>
-                <textarea rows={4} className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none placeholder:text-white/30" placeholder="Opišite ukratko vaše ciljeve ili podijelite link na trenutnu stranicu..."></textarea>
+                <textarea name="message" rows={4} className="w-full bg-surface/40 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none placeholder:text-white/30" placeholder="Opišite ukratko vaše ciljeve ili podijelite link na trenutnu stranicu..."></textarea>
               </div>
 
               {status === "error" && (
@@ -104,6 +120,18 @@ export function ContactSection() {
                 <p className="text-center text-xs text-text-muted mt-4">
                   {microcopy}
                 </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 pt-6 border-t border-white/5">
+                  <p className="text-sm text-text-muted">Ili nam se javite direktno:</p>
+                  <div className="flex items-center gap-4">
+                    <a href="mailto:info@vasatvrtka.hr" className="text-sm font-medium text-white hover:text-primary transition-colors">
+                      info@vasatvrtka.hr
+                    </a>
+                    <span className="text-white/20">•</span>
+                    <a href="https://wa.me/385912345678" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white hover:text-primary transition-colors">
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
               </div>
             </form>
           )}
